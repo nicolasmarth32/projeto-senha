@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="emoji-container" id="emojiContainer"></div>
+    <div class="container">
+        <h1>🔐 Gerador de Senhas</h1>
+
+        <div class="options">
+            <label>
+                <input type="checkbox" id="uppercase" checked>
+                Letras maiúsculas
+            </label>
+            <label>
+                <input type="checkbox" id="lowercase" checked>
+                Letras minúsculas
+            </label>
+            <label>
+                <input type="checkbox" id="numbers" checked>
+                Números
+            </label>
+            <label>
+                <input type="checkbox" id="symbols">
+                Símbolos
+            </label>
+            <label>
+                Comprimento:
+                <input type="number" id="length" min="4" max="50" value="12">
+            </label>
+        </div>
+
+        <button id="generate">Gerar Senha</button>
+
+        <div class="password-box">
+            <input type="text" id="password" readonly>
+            <button id="copy">📋</button>
+        </div>
+
+        <div class="strength">
+            <div class="bar" id="strengthBar"></div>
+        </div>
+        <p id="strengthText">Segurança: -</p>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

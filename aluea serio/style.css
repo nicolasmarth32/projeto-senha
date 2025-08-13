@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(-45deg, #3a1c71, #2f80ed, #3a1c71, #2f80ed);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 320px;
+    color: white;
+    backdrop-filter: blur(10px);
+}
+
+.options {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.options label {
+    display: block;
+    margin: 5px 0;
+}
+
+.password-box {
+    display: flex;
+    margin-top: 10px;
+}
+
+.password-box input {
+    flex: 1;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.password-box button {
+    border: none;
+    background: #444;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.strength {
+    width: 100%;
+    height: 10px;
+    background: #555;
+    border-radius: 5px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.bar {
+    height: 100%;
+    width: 0;
+    transition: width 0.3s ease, background 0.3s ease;
+}
+
+.emoji-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+}
